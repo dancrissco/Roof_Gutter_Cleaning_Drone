@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<robot name="house_model">
+
+  <!-- Platform -->
+  <link name="platform">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="assets/part_1.stl"/>
+      </geometry>
+      <material name="concrete">
+        <color rgba="0.7 0.7 0.7 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+  </link>
+
+  <joint name="walls_joint" type="fixed">
+    <parent link="platform"/>
+    <child link="walls"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="walls">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="assets/part_1__2.stl"/>
+      </geometry>
+      <material name="orange_red">
+        <color rgba="0.7 0.3 0.2 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+  </link>
+
+  <joint name="roof_joint" type="fixed">
+    <parent link="walls"/>
+    <child link="roof"/>
+    <origin xyz="0 0 3.0" rpy="0 0 0"/>
+  </joint>
+  <link name="roof">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="assets/part_1__3.stl"/>
+      </geometry>
+      <material name="roof">
+        <color rgba="0.2 0.2 0.2 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+  </link>
+
+  <joint name="gutter_joint" type="fixed">
+    <parent link="roof"/>
+    <child link="gutter"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+  </joint>
+  <link name="gutter">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="assets/part_1__4.stl"/>
+      </geometry>
+      <material name="gutter">
+        <color rgba="0.95 0.95 0.95 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+  </link>
+
+</robot>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot name="quad_monobody">
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0.0375" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="quad_body.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="orange">
+        <color rgba="1.0 0.5 0.1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0375" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="quad_body.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.02"/>
+      <origin xyz="0 0 0.0375" rpy="0 0 0"/>
+    </inertial>
+  </link>
+
+</robot>
+
+#Blue	0.1 0.1 1.0 1	<color rgba="0.1 0.1 1.0 1"/>
+#Red	1.0 0.1 0.1 1	<color rgba="1.0 0.1 0.1 1"/>
+#Green	0.1 1.0 0.1 1	<color rgba="0.1 1.0 0.1 1"/>
+#Yellow	1.0 1.0 0.1 1	<color rgba="1.0 1.0 0.1 1"/>
+#Orange	1.0 0.5 0.1 1	<color rgba="1.0 0.5 0.1 1"/>
