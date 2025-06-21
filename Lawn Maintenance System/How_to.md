@@ -49,7 +49,7 @@ Insert a screenshot or GIF of the drone flying + mower mowing here.
 MIT License — feel free to use, modify, and extend with credit.
 
 🤝 Contributors
-👨‍🔧 Design + simulation: [Daniel Christadoss]
+👨‍🔧 Design + simulation: Daniel Christadoss
 
 🤖 Assistant code generation: ChatGPT
 
